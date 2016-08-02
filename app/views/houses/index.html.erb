@@ -1,9 +1,12 @@
 <h1>GAME OF THRONES </h1>
+<h3><%= link_to "New House", new_house_path %></h3>
 <ul>
   <% @houses.each do |house| %>
   <li>
     <p><%= link_to house.name, house_path(house) %></p>
+    <p><%= link_to 'Delete House', house_path(house),
+           method: :delete,
+           data: { confirm: 'Are you sure?'}%></p>
   </li>
   <% end %>
-  <h3><%= link_to "New House", new_house_path %></h3>
 </ul>
