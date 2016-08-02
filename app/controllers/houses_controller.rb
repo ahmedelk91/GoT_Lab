@@ -17,11 +17,21 @@ class HousesController < ApplicationController
 
   def create
     @house = House.new(house_params)
-    @house.save
+
     if @house.save
     redirect_to @house
   else
     render 'new'
+  end
+end
+
+def update
+  @house = House.find(params[:id])
+
+  if @house.update(house_params)
+    redirect_to @house
+  else
+    render 'edit'
   end
 end
 
