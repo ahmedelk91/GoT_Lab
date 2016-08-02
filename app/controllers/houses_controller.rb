@@ -10,4 +10,14 @@ class HousesController < ApplicationController
   def new
     @house=House.new
   end
+
+  def create
+    @house = House.create!(house_params)
+    redirect_to @house
+  end
+
+  private
+  def house_params
+    params.require(:house).permit(:name, :description, :img_url)
+  end
 end
