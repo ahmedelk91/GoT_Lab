@@ -13,42 +13,10 @@
 <img src="<%= @house.img_url %>">
 
 <h2>Characters</h2>
-<% @house.characters.each do |character| %>
-<p>
-  <strong> Name: </strong>
-  <%= character.name %>
-</p>
-<p>
-  <strong> Description: </strong>
-  <%= character.description %>
-</p>
-
-<img src="<%= character.img_url %>">
-
-<% end %>
+<%= render @house.characters %>
 
 <h3>Add a character:</h3>
-<%= form_for([@house, @house.characters.build]) do |f| %>
-<p>
-  <%= f.label :name %> <br>
-  <%= f.text_field :name %>
-</p>
-
-<p>
-  <%= f.label :description %> <br>
-  <%= f.text_field :description %>
-</p>
-
-<p>
-  <%= f.label :img_url %> <br>
-  <%= f.text_field :img_url %>
-</p>
-
-<p>
-  <%= f.submit %>
-</p>
-
-<% end %>
+<%= render 'characters/form' %>
 
 <p><%= link_to 'Edit', edit_house_path(@house) %></p>
 <p><%= link_to 'Back', houses_path %></p>
