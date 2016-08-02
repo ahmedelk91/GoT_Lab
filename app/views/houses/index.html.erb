@@ -1,7 +1,8 @@
+<h1>GAME OF THRONES</h1>
 <ul>
   <% @houses.each do |house| %>
   <li>
-    <p><%= link_to house.body, house %></p>
+    <p><%= link_to house.name, house_path(house) %></p>
   </li>
   <% end %>
 </ul>
