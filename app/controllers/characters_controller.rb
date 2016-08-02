@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
 def create
-  @house = House.find(params [:house_id])
+  @house = House.find(params[:house_id])
   @character = @house.characters.create(character_params)
   redirect_to house_path(@house)
 end
