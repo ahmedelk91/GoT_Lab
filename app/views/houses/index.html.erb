@@ -1,1 +1,7 @@
-<h1>Hello world!</h1>
+<ul>
+  <% @houses.each do |house| %>
+  <li>
+    <p><%= link_to house.body, house %></p>
+  </li>
+  <% end %>
+</ul>

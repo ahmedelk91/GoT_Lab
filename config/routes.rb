@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'houses' => 'houses#index'
+resources :houses, only: [:index, :show]
 end
