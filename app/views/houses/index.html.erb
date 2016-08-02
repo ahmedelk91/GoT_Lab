@@ -3,15 +3,17 @@
 
 <tabel>
   <tr>
-    <td>House</td>
+    <th>House</th>
+    <th>Description</th>
+    <th colspan="2"></th>
   </tr>
 
   <% @houses.each do |house| %>
   <tr>
     <td><%= link_to house.name, house_path(house) %></td>
     <td><%= link_to 'Delete House', house_path(house),
-           method: :delete,
-           data: { confirm: 'Are you sure?'}%></td>
+    method: :delete,
+    data: { confirm: 'Are you sure?'}%></td>
     <td><%= link_to 'Edit', edit_house_path(house) %></td>
     <!-- <td><%= link_to 'Show', house_path(house) %></td> -->
   </tr>

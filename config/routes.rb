@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-resources :houses
+resources :houses do
+  resources :characters
+end
 end
