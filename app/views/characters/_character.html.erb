@@ -9,3 +9,9 @@
 </p>
 
 <img src="<%= character.img_url %>">
+
+<p>
+  <%= link_to 'Kill Character', [character.house, character],
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+</p>
