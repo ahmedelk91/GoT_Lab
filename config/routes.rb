@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-resources :houses, only: [:index, :show]
+resources :houses, only: [:index, :show, :new]
 end
