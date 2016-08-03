@@ -21,3 +21,27 @@
 
 .alert { color:red; }
 .notice { color:blue; }
+
+#title {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.house_pics {
+  height: 500px;
+  width: 1155px;
+}
+
+.character_pics {
+  display: flex;
+  height: 300px;
+  width: 300px;
+}

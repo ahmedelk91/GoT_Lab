@@ -1,21 +1,13 @@
-<h1>GAME OF THRONES </h1>
+<h1 id="title">GAME OF THRONES </h1>
 <h3><%= link_to "New House", new_house_path %></h3>
 
-<tabel>
-  <tr>
-    <th>House</th>
-    <th>Description</th>
-    <th colspan="2"></th>
-  </tr>
-
   <% @houses.each do |house| %>
-  <tr>
-    <td><%= link_to house.name, house_path(house) %></td>
-    <td><%= link_to 'Delete House', house_path(house),
+  <ul>
+    <li><%= link_to house.name, house_path(house) %></li>
+    <p><%= link_to 'Edit', edit_house_path(house) %>
+    <%= link_to 'Delete', house_path(house),
     method: :delete,
-    data: { confirm: 'Are you sure?'}%></td>
-    <td><%= link_to 'Edit', edit_house_path(house) %></td>
+    data: { confirm: 'Are you sure?'}%></p>
     <!-- <td><%= link_to 'Show', house_path(house) %></td> -->
-  </tr>
+  </ul>
   <% end %>
-</table>
