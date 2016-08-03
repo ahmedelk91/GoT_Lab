@@ -20,3 +20,7 @@
 
 <p><%= link_to 'Edit', edit_house_path(@house) %></p>
 <p><%= link_to 'Back', houses_path %></p>
+
+<% flash.each do |type, message| %>
+<p class="flash <%= type %>" >: <%= message %></p>
+<% end %>

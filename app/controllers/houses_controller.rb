@@ -17,13 +17,8 @@ class HousesController < ApplicationController
 
   def create
     @house = House.new(house_params)
-
-    if @house.save
-    redirect_to @house
-  else
-    render 'new'
+    redirect_to @house, notice: "House successfully created."
   end
-end
 
 def update
   @house = House.find(params[:id])
