@@ -10,4 +10,6 @@ class SessionsController < ApplicationController
   def another
     @name = session[:name]
   end
+
+  # like Andy was saying during the lesson, we dont strictly need a controller for session variables
 end

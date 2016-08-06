@@ -12,6 +12,8 @@ def destroy
   redirect_to house_path(@house)
 end
 
+# thumbs up
+
 private
 def character_params
   params.require(:character).permit(:name, :description, :img_url)

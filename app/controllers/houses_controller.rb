@@ -1,4 +1,6 @@
 class HousesController < ApplicationController
+  # controller is super clean & fresh 
+
   def index
     @houses = House.all
   end
